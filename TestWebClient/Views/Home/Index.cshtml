@@ -1,0 +1,56 @@
+﻿@model ViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@if (User.Identity.IsAuthenticated)
+{
+    <div class="row all-content">
+        <div class="col-md-4 collection-list">
+            <form method="post" asp-controller="Home" asp-action="CreateCollection">
+                <input type="hidden" name="userName" value="@User.Identity.Name">
+                <input type="text" name="Title" />
+                <button class="btn btn-primary" type="submit">Create collection</button>
+            </form>
+            @await Component.InvokeAsync("Collections", new { userName = User.Identity.Name })
+        </div>
+        <div class="col-md-8 body-content" id="divContent">
+            @{ await Html.RenderPartialAsync("_contentList", Model); }
+        </div>
+    </div>
+
+    <div id="log-out">
+        <form method="post" asp-controller="Account" asp-action="LogOut">
+            @User.Identity.Name
+            <button type="submit">Log out</button>
+        </form>
+    </div>
+}
+else
+{
+    <h2>Test client for web service</h2>
+    <div>
+        <form asp-controller="Account" asp-action="Login">
+            <button style="background-color:cornflowerblue;" type="submit">
+                Log in
+            </button>
+        </form>
+    </div>
+
+    <div>
+        <form asp-controller="Account" asp-action="Register">
+            <button style="background-color:cornflowerblue" type="submit">
+                Registration
+            </button>
+        </form>
+    </div>
+
+    <div>
+        <form method="post" asp-controller="Home" asp-action="InitializeDataOnServer">
+            <button type="submit" class="btn btn-primary" alt="If database have already created this button won't be work.">
+                Click here to create database and load data on server side.
+            </button>
+</form>
+    </div>
+}

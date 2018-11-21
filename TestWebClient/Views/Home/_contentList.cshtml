@@ -1,0 +1,103 @@
+﻿@model ViewModel
+
+
+@switch (ViewBag.Content)
+{
+    case ContentState.EditContent:
+        {
+            <div class="col-md-pull-4">
+                <h2>@Model.Collection.Title</h2>
+            </div>
+            @foreach (var feedRss in Model.Feeds)
+            {
+                <div class="col-md-11">
+                    <a href="@feedRss.Link">
+                        <p>@feedRss.Title</p>
+                        <p>@feedRss.Description</p>
+                    </a>
+                </div>
+                <div class="col-md-1">
+                    @if (feedRss.FeedsCollections.Where(feed => feed.CollectionId == ViewBag.CollectionId).Count() == 0)
+                    {
+                        <form method="post" asp-controller="Home" asp-action="AddContentToCollection">
+                            <input type="hidden" name="collectionId" value="@ViewBag.CollectionId" />
+                            <input type="hidden" name="feedId" value="@feedRss.Id" />
+                            <button type="submit" class="btn btn-success">Follow</button>
+                        </form>
+                    }
+                    else
+                    {
+                        <form method="post" asp-controller="Home" asp-action="DeleteContentFromCollection">
+                            <input type="hidden" name="collectionId" value="@ViewBag.CollectionId" />
+                            <input type="hidden" name="feedId" value="@feedRss.Id" />
+                            <button type="submit" class="btn btn-danger">Unfollow</button>
+                        </form>
+                    }
+                </div>
+            }
+        }
+        break;
+    case ContentState.GetFeedsFromCollection:
+        {
+            <page-link page-model="Model.PageViewModel" page-action="GetFeedsFromCollection"></page-link>
+
+            <div class="row">
+                @foreach (var item in Model.Items)
+                {
+                    <div class="row">
+                        <a href="@Url.Action("GetNewsInfo", "Home",
+                              new
+                              {
+                                  title = item.Title,
+                                  description = item.Description,
+                                  image = item.ImageLink,
+                                  link = item.Link
+                              })">
+                            <div class="col-md-12" style="border: solid">
+                                <p>@item.Title</p>
+                            </div>
+                        </a>
+                    </div>
+                }
+            </div>
+        }
+        break;
+    case ContentState.GetNewsInfo:
+        {
+            <h2>@Model.Item.Title</h2><b />
+            <img src="@Model.Item.ImageLink" />
+            <p>@Model.Item.Description</p>
+            <a href="@Model.Item.Link">Go to News</a>
+        }
+        break;
+    case ContentState.GetFeedItems:
+        {
+            <page-link page-model="Model.PageViewModel" page-action="GetContent"></page-link>
+
+            <div class="row">
+                @foreach (var item in Model.Items)
+                {
+                    <div class="row">
+                        <a href="@Url.Action("GetNewsInfo", "Home",
+                              new
+                              {
+                                  title = item.Title,
+                                  description = item.Description,
+                                  image = item.ImageLink,
+                                  link = item.Link
+                              })">
+                            <div class="col-md-12" style="border: solid">
+                                <p>@item.Title</p>
+                            </div>
+                        </a>
+                    </div>
+                }
+            </div>
+        }
+        break;
+    case ContentState.Default:
+        {
+            <h2>Asp.Net MVC Core test client</h2>
+        }
+        break;
+}

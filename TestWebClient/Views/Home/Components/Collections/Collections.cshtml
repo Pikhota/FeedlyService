@@ -1,0 +1,40 @@
+﻿@model IEnumerable<FeedlyServiceApi.Models.Collection>
+
+<h2>Feeds collection</h2>
+
+@foreach (var collection in Model)
+{
+    <div class="row" style="border: solid">
+        <div class="col-md-6">
+            <div class="btn-group">
+                <form method="get" asp-controller="Home" asp-action="GetFeedsFromCollection">
+                    <input type="hidden" name="contentId" value="@collection.Id" />
+                    <button type="submit" class="btn btn-primary">@collection.Title</button>
+                </form>
+                @foreach (var fc in collection.FeedsCollections)
+                {
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form method="get" asp-controller="Home" asp-action="GetContent">
+                                <input type="hidden" name="contentId" value="@fc.Feed.Id" />
+                                <button class="btn btn-info">@fc.Feed.Title</button>
+                            </form>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="col-md-6">
+            <form data-ajax="true" data-ajax-method="post" data-ajax-update="#divContent" asp-controller="Home" asp-action="SelectContent">
+                <input type="hidden" name="collectionId" value="@collection.Id" />
+                <button type="submit" class="btn btn-success">
+                    Add content
+                </button>
+            </form>
+            <form method="post" asp-controller="Home" asp-action="DeleteCollection">
+                <input type="hidden" name="id" value="@collection.Id" />
+                <button type="submit" class="btn btn-danger">Delete collection</button>
+            </form>
+        </div>
+    </div>
+}

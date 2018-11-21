@@ -1,0 +1,14 @@
+D:\KodiSoft\FeedlyServiceApi\FeedlyServiceApi\bin\Debug\netcoreapp2.1\FeedlyServiceApi.deps.json
+D:\KodiSoft\FeedlyServiceApi\FeedlyServiceApi\bin\Debug\netcoreapp2.1\FeedlyServiceApi.runtimeconfig.json
+D:\KodiSoft\FeedlyServiceApi\FeedlyServiceApi\bin\Debug\netcoreapp2.1\FeedlyServiceApi.runtimeconfig.dev.json
+D:\KodiSoft\FeedlyServiceApi\FeedlyServiceApi\bin\Debug\netcoreapp2.1\FeedlyServiceApi.dll
+D:\KodiSoft\FeedlyServiceApi\FeedlyServiceApi\bin\Debug\netcoreapp2.1\FeedlyServiceApi.pdb
+D:\KodiSoft\FeedlyServiceApi\FeedlyServiceApi\obj\Debug\netcoreapp2.1\FeedlyServiceApi.csproj.CoreCompileInputs.cache
+D:\KodiSoft\FeedlyServiceApi\FeedlyServiceApi\obj\Debug\netcoreapp2.1\FeedlyServiceApi.RazorAssemblyInfo.cache
+D:\KodiSoft\FeedlyServiceApi\FeedlyServiceApi\obj\Debug\netcoreapp2.1\FeedlyServiceApi.RazorAssemblyInfo.cs
+D:\KodiSoft\FeedlyServiceApi\FeedlyServiceApi\obj\Debug\netcoreapp2.1\FeedlyServiceApi.AssemblyInfoInputs.cache
+D:\KodiSoft\FeedlyServiceApi\FeedlyServiceApi\obj\Debug\netcoreapp2.1\FeedlyServiceApi.AssemblyInfo.cs
+D:\KodiSoft\FeedlyServiceApi\FeedlyServiceApi\obj\Debug\netcoreapp2.1\FeedlyServiceApi.RazorTargetAssemblyInfo.cache
+D:\KodiSoft\FeedlyServiceApi\FeedlyServiceApi\obj\Debug\netcoreapp2.1\FeedlyServiceApi.dll
+D:\KodiSoft\FeedlyServiceApi\FeedlyServiceApi\obj\Debug\netcoreapp2.1\FeedlyServiceApi.pdb
+D:\KodiSoft\FeedlyServiceApi\FeedlyServiceApi\obj\Debug\netcoreapp2.1\FeedlyServiceApi.csprojAssemblyReference.cache
