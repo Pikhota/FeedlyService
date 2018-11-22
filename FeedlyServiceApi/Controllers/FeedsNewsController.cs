@@ -20,7 +20,6 @@ namespace FeedlyServiceApi.Controllers
 		private readonly FeedDbContext _context;
 		private readonly ILogger _logger;
 		private IMemoryCache _memoryCache;
-		private object _locker = new object();
 
 		public FeedsNewsController(FeedDbContext context, ILogger<FeedsNewsController> logger, IMemoryCache memoryCache)
 		{
