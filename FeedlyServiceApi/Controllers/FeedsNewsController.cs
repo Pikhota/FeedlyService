@@ -20,11 +20,15 @@ namespace FeedlyServiceApi.Controllers
 		private readonly FeedDbContext _context;
 		private readonly ILogger _logger;
 		private IMemoryCache _memoryCache;
+		private object _locker = new object();
 
 		public FeedsNewsController(FeedDbContext context, ILogger<FeedsNewsController> logger, IMemoryCache memoryCache)
 		{
 			_memoryCache = memoryCache;
-			_context = context;
+			lock(_locker)
+			{
+				_context = context;
+			}
 			_logger = logger;
 		}
 
@@ -47,6 +51,7 @@ namespace FeedlyServiceApi.Controllers
 				await DataService.InitializeData(_context);
 				_logger.LogInformation("Data loaded into the database");
 			}
+			_logger.LogInformation("Database is not empty!");
 			return NoContent();
 		}
 
