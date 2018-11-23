@@ -85,7 +85,7 @@ using TestWebClient.ViewModels;
             WriteLiteral("    <div class=\"row all-content\">\r\n        <div class=\"col-md-4 collection-list\">\r\n            ");
             EndContext();
             BeginContext(202, 318, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "112fcbc2c30844f390779739df18040e", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "91dc2aafe5774ee090a1b3cadd512370", async() => {
                 BeginContext(274, 54, true);
                 WriteLiteral("\r\n                <input type=\"hidden\" name=\"userName\"");
                 EndContext();
@@ -144,7 +144,7 @@ WriteAttributeValue("", 336, User.Identity.Name, 336, 19, false);
             WriteLiteral("    <div id=\"log-out\">\r\n        ");
             EndContext();
             BeginContext(829, 167, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a8b6f581a0e64d658d6b1da18e84eea7", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "61cdce58f23f4807a23570c2f5f54ece", async() => {
                 BeginContext(894, 14, true);
                 WriteLiteral("\r\n            ");
                 EndContext();
@@ -192,7 +192,7 @@ else
             WriteLiteral("    <h2>Test client for web service</h2>\r\n    <div>\r\n        ");
             EndContext();
             BeginContext(1083, 191, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "49a3568d8994469b8b8134fe0be04723", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2eac20f009074e71968360fd75001c1c", async() => {
                 BeginContext(1133, 134, true);
                 WriteLiteral("\r\n            <button style=\"background-color:cornflowerblue;\" type=\"submit\">\r\n                Log in\r\n            </button>\r\n        ");
                 EndContext();
@@ -221,7 +221,7 @@ else
             WriteLiteral("    <div>\r\n        ");
             EndContext();
             BeginContext(1309, 199, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "051c17cab4d14f56958e48dca6d6d1e4", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0f2d6fb062334d2d85fc7632a317b56a", async() => {
                 BeginContext(1362, 139, true);
                 WriteLiteral("\r\n            <button style=\"background-color:cornflowerblue\" type=\"submit\">\r\n                Registration\r\n            </button>\r\n        ");
                 EndContext();
@@ -250,7 +250,7 @@ else
             WriteLiteral("    <div>\r\n        ");
             EndContext();
             BeginContext(1543, 313, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c595663851e445459bbe1210e9f607c5", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8807b54701aa4ccaa00a671facf3b0e1", async() => {
                 BeginContext(1621, 228, true);
                 WriteLiteral("\r\n            <button type=\"submit\" class=\"btn btn-primary\" alt=\"If database have already created this button won\'t be work.\">\r\n                Click here to create database and load data on server side.\r\n            </button>\r\n");
                 EndContext();

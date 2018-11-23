@@ -135,7 +135,7 @@ WriteAttributeValue("", 346, feedRss.Link, 346, 13, false);
             WriteLiteral("                        ");
             EndContext();
             BeginContext(722, 392, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b6c7ef41b7314622b82c96ff0b5c9ec6", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fa00115642b84e3fbaedf5d23a8edcfc", async() => {
                 BeginContext(800, 70, true);
                 WriteLiteral("\r\n                            <input type=\"hidden\" name=\"collectionId\"");
                 EndContext();
@@ -193,7 +193,7 @@ WriteAttributeValue("", 975, feedRss.Id, 975, 11, false);
             WriteLiteral("                        ");
             EndContext();
             BeginContext(1212, 398, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c534f578e72442b0980a0b985a5135a5", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "795084d7a17c4fe6ae7765dcac6ac4de", async() => {
                 BeginContext(1295, 70, true);
                 WriteLiteral("\r\n                            <input type=\"hidden\" name=\"collectionId\"");
                 EndContext();
@@ -266,7 +266,7 @@ WriteAttributeValue("", 1470, feedRss.Id, 1470, 11, false);
             WriteLiteral("            ");
             EndContext();
             BeginContext(1771, 93, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("page-link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b4497a44f73b433b91ab5257e32eea38", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("page-link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ee0aee11abac4cfd831050ac3cb84cac", async() => {
             }
             );
             __TestWebClient_Models_PageLinkTagHelper = CreateTagHelper<global::TestWebClient.Models.PageLinkTagHelper>();
@@ -400,7 +400,7 @@ WriteAttributeValue("", 2908, Model.Item.Link, 2908, 16, false);
             WriteLiteral("            ");
             EndContext();
             BeginContext(3029, 81, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("page-link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9795f079d1994df891c7adeeed85b9c4", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("page-link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "84ecab2a94c84523a906e268d80bb954", async() => {
             }
             );
             __TestWebClient_Models_PageLinkTagHelper = CreateTagHelper<global::TestWebClient.Models.PageLinkTagHelper>();
