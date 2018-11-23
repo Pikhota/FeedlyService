@@ -51,7 +51,11 @@ namespace FeedlyServiceApi.Controllers
 				await DataService.InitializeData(_context);
 				_logger.LogInformation("Data loaded into the database");
 			}
-			_logger.LogInformation("Database is not empty!");
+			else
+			{
+				_logger.LogInformation("Database is not empty!");
+			}
+
 			return NoContent();
 		}
 
