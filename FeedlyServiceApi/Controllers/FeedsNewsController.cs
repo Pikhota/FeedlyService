@@ -101,6 +101,21 @@ namespace FeedlyServiceApi.Controllers
 			return collections;
 		}
 
+		[HttpGet]
+		[Route("GetAllNews")]
+		public async Task<List<ItemRSS>> GetAllNews()
+		{
+			if(!_memoryCache.TryGetValue(KeysService.KeyAllItems(), out List<ItemRSS> items))
+			{
+				using (FeedDbContext db = _context)
+				{
+					items = await db.ItemsRSS.ToListAsync();
+					_memoryCache.Set(KeysService.KeyAllItems(), items);
+				}
+			}
+			return items;
+		}
+
 		[HttpPost]
 		[Route("create")]
 		public async Task<IActionResult> CreateCollection(Collection collection)

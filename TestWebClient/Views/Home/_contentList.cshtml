@@ -95,6 +95,31 @@
             </div>
         }
         break;
+    case ContentState.GetAllNews:
+        {
+            <page-link page-model="Model.PageViewModel" page-action="GetAllNews"></page-link>
+
+            <div class="row">
+                @foreach (var item in Model.Items)
+                {
+                    <div class="row">
+                        <a href="@Url.Action("GetNewsInfo", "Home",
+                              new
+                              {
+                                  title = item.Title,
+                                  description = item.Description,
+                                  image = item.ImageLink,
+                                  link = item.Link
+                              })">
+                            <div class="col-md-12" style="border: solid">
+                                <p>@item.Title</p>
+                            </div>
+                        </a>
+                    </div>
+                }
+            </div>
+        }
+        break;
     case ContentState.Default:
         {
             <h2>Asp.Net MVC Core test client</h2>

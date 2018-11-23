@@ -52,6 +52,24 @@ namespace TestWebClient.Controllers
 			return View("Index", viewModel);
 		}
 
+		[HttpGet]
+		public async Task<IActionResult> GetAllNews(int page = 1)
+		{
+			using (HttpClient client = _api.Initial())
+			{
+				using (HttpResponseMessage response = await client.GetAsync($"api/FeedsNews/GetAllNews"))
+				{
+					response.EnsureSuccessStatusCode();
+					var resultResponse = await response.Content.ReadAsStringAsync();
+					List<ItemRSS> items = JsonConvert.DeserializeObject<List<ItemRSS>>(resultResponse);
+
+					ViewBag.Content = ContentState.GetAllNews;
+
+					return View("Index", GetViewModel(items, page, 0));
+				}
+			}
+		}
+
 		[HttpPost]
 		public async Task<IActionResult> CreateCollection(string userName, Collection collection)
 		{

@@ -14,6 +14,11 @@ namespace FeedlyServiceApi.Services
 			return feedsCollections != null ? $"{PREFIX_COLLECTION}{feedsCollections.CollectionId}{feedsCollections.FeedId}": string.Empty;
 		}
 
+		public static string KeyAllItems()
+		{
+			return $"{PREFIX_ITEMS}";
+		}
+
 		public static string KeyItems(int feedId)
 		{
 			return feedId > 0 ? $"{PREFIX_ITEMS}{feedId}" : string.Empty;

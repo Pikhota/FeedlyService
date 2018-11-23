@@ -6,6 +6,7 @@
 		EditContent,
 		GetFeedsFromCollection,
 		GetNewsInfo,
-		GetFeedItems
+		GetFeedItems,
+		GetAllNews
 	}
 }
